@@ -3,7 +3,8 @@ FROM php:7.4-apache
 
 # Copiez les fichiers PHP et CSS de votre application dans le conteneur
 COPY index.php .
-COPY style.css .
+COPY airports.php .
+COPY ports.php .
 
 # Exposez le port 80 pour accéder à l'application web via un navigateur
-EXPOSE 80
+EXPOSE 90
