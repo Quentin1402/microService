@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mariadb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./liste.sql:/docker-entrypoint-initdb.d/MariaDB/liste.sql
+
+  web:
+    build:
+      context: ./app
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
