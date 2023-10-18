@@ -14,7 +14,7 @@ Le back et le front de mon projet sont dans le dossier app, ce code est dans un 
 
 MariaDB
 
-Nous utilisons une base de données MariaDB pour stocker les informations sur les ports et aéroports. Elles sont stockées dans deux table "airport" et "port" qui contiennent les colonnes id, rank, name, country et code.
+Nous utilisons une base de données MariaDB pour stocker les informations sur les ports et aéroports. Elles sont stockées dans deux table "airport" et "port" qui contiennent les colonnes "id", "rank", "name", "country" et "code".
 
 Docker
 
