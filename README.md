@@ -8,6 +8,8 @@ Ce projet est une application web qui affiche une liste des 100 plus grands aér
 
 Architecture : 
 
+[Uploading architecture.drawio…]
+
 PHP
 
 Le back et le front de mon projet sont dans le dossier app, ce code est dans un container dans lequel j'utilise PHP 7.4.
