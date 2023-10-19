@@ -34,6 +34,8 @@ Technologies Utilisées :
 
 Image du projet sur DockerHub : https://hub.docker.com/repository/docker/quentin1402/microservice/general
 
-Build : 
+Build sans erreurs : 
 ![image](https://github.com/Quentin1402/microService/assets/113422793/e9de9b7e-75a4-4be7-9345-e1b565c299a3)
 
+Fonctionne en https : 
+![image](https://github.com/Quentin1402/microService/assets/113422793/12d2292f-7d4b-4304-96b5-b08f8748b8e7)
