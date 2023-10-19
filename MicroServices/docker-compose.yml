@@ -13,6 +13,11 @@ services:
       - "3307:3306"
     volumes: 
       - ./MariaDB/liste.sql:/docker-entrypoint-initdb.d/liste.sql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u user -p root"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   web:
     build:
