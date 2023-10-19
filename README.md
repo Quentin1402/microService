@@ -11,7 +11,6 @@ Architecture :
 ![image](https://github.com/Quentin1402/microService/assets/113422793/e6a6dfa3-16da-4702-8308-415bf35e8104)
 
 
-
 PHP
 
 Le back et le front de mon projet sont dans le dossier app, ce code est dans un container dans lequel j'utilise PHP 7.4.
@@ -32,3 +31,9 @@ Technologies Utilisées :
 - MariaDB : Système de gestion de base de données relationnelles, simple et utilisé quotidiennement en entreprise.
 - Docker : Pour mettre dans un conteneurs les services PHP et MariaDB.
 - Docker Compose : Pour gerer les conteneurs du projet.
+
+Image du projet sur DockerHub : https://hub.docker.com/repository/docker/quentin1402/microservice/general
+
+Build : 
+![image](https://github.com/Quentin1402/microService/assets/113422793/e9de9b7e-75a4-4be7-9345-e1b565c299a3)
+
