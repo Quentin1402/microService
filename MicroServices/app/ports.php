@@ -34,7 +34,7 @@
 
     <?php
     // Connexion à la base de données
-    $servername = "localhost";
+    $servername = "db";
     $username = "user";
     $password = "root";
     $dbname = "mariadb";
