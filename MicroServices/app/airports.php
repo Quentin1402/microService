@@ -34,7 +34,7 @@
 
     <?php
     // Connexion à la base de données
-    $servername = "localhost";
+    $servername = "db";
     $username = "user";
     $password = "root";
     $dbname = "mariadb";
@@ -56,7 +56,7 @@
             echo "<tr><td>" . $row["rank"] . "</td><td>" . $row["name"] . "</td><td>" . $row["country"] . "</td><td>" . $row["code"] . "</td></tr>";
         }
     } else {
-        echo "Aucun aéroport";
+        echo "Aucun aérport";
     }
 
     $conn->close();
