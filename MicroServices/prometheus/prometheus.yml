@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 15s  # Fréquence de raclage des métriques
+
+scrape_configs:
+  - job_name: 'web'
+    static_configs:
+      - targets: ['web:9090']  # Le service web expose des métriques sur le port 9090
+
+  - job_name: 'db'
+    static_configs:
+      - targets: ['db:3306']  # Le service de base de données expose des métriques sur le port 3306
+
+  - job_name: 'nginx'
+    static_configs:
+      - targets: ['nginx:80']  # Le service Nginx expose des métriques sur le port 80
+
+  - job_name: 'rabbitmq'
+    static_configs:
+      - targets: ['rabbitmq:15672']  # Le service RabbitMQ expose des métriques sur le port 15672
