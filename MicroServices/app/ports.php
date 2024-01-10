@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Liste des Ports</title>
@@ -10,7 +11,8 @@
             width: 100%;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid #dddddd;
             text-align: left;
             padding: 8px;
@@ -25,6 +27,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <h2>Liste des 100 Plus Grands Ports du Monde</h2>
@@ -40,8 +43,6 @@
         </thead>
         <tbody>
             <?php
-
-            require_once '../vendor/autoload.php';
 
             // Connexion à la base de données
             $servername = "db";
@@ -62,7 +63,7 @@
 
             if ($result->num_rows > 0) {
                 // Affichage des données de chaque ligne
-                while($row = $result->fetch_assoc()) {
+                while ($row = $result->fetch_assoc()) {
                     echo "<tr><td>" . $row["rank"] . "</td><td>" . $row["name"] . "</td><td>" . $row["country"] . "</td><td>" . $row["code"] . "</td></tr>";
 
                     // Journalisation des données de chaque port
@@ -82,4 +83,5 @@
         </tbody>
     </table>
 </body>
+
 </html>

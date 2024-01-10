@@ -20,7 +20,7 @@ services:
   # Service de l'application web
   web:
     build:
-      context: ./app                    # Répertoire contenant les fichiers sources de l'application web
+      context: .                    # Répertoire contenant les fichiers sources de l'application web
     ports: 
       - "9090:80"                       # Mappage du port local 9090 au port 80 du conteneur
     depends_on: 
@@ -83,7 +83,7 @@ services:
     image: docker.elastic.co/logstash/logstash:7.11.1
     container_name: logstash
     volumes:
-      - ./logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - ./logstash/logstash.conf:/usr/share/logstash/pipeline/
     ports:
       - "5044:5044"
       - "5045:5045"
