@@ -64,12 +64,19 @@
                 // Affichage des données de chaque ligne
                 while($row = $result->fetch_assoc()) {
                     echo "<tr><td>" . $row["rank"] . "</td><td>" . $row["name"] . "</td><td>" . $row["country"] . "</td><td>" . $row["code"] . "</td></tr>";
+
+                    // Journalisation des données de chaque port
+                    $logMessage = "Port: " . $row["name"] . ", Country: " . $row["country"] . ", Code: " . $row["code"];
+                    error_log($logMessage, 3, "/var/logs/app.log"); // Utilisez le chemin approprié pour vos logs
                 }
 
                 // Affichage du message après l'affichage des ports
                 echo "<p>Les ports ont été affichés avec succès !</p>";
             } else {
                 echo "<tr><td colspan='4'>Aucun ports</td></tr>";
+
+                // Journalisation en cas de l'absence de ports
+                error_log("Aucun port n'a été trouvé.", 3, "/var/logs/app.log"); // Utilisez le chemin approprié pour vos logs
             }
             ?>
         </tbody>
