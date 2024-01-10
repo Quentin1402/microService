@@ -94,8 +94,9 @@ services:
     networks:
       - dockerelk
     volumes:
-      - ./logstash/logstash.yml:/usr/share/logstash/config/logstash.yml
-      - ./logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - ./logstash/config:/usr/share/logstash/config  # Montage du dossier de configuration
+      - ./logstash/pipeline:/usr/share/logstash/pipeline  # Montage du dossier de pipeline
+
 
   kibana:
     image: kibana:7.6.2
