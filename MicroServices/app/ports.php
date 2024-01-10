@@ -41,10 +41,7 @@
         <tbody>
             <?php
 
-            // include('/vendor/autoload.php');
-
-            // Import de la classe AMQPMessage
-            // use PhpAmqpLib\Message\AMQPMessage;
+            require_once '../vendor/autoload.php';
 
             // Connexion à la base de données
             $servername = "db";
@@ -67,9 +64,6 @@
                 // Affichage des données de chaque ligne
                 while($row = $result->fetch_assoc()) {
                     echo "<tr><td>" . $row["rank"] . "</td><td>" . $row["name"] . "</td><td>" . $row["country"] . "</td><td>" . $row["code"] . "</td></tr>";
-
-                    // Utilisation de RabbitMQ - produire un message pour chaque port
-                    // produceRabbitMQMessage($row);
                 }
 
                 // Affichage du message après l'affichage des ports
@@ -77,34 +71,6 @@
             } else {
                 echo "<tr><td colspan='4'>Aucun ports</td></tr>";
             }
-
-            // function produceRabbitMQMessage($portData) {
-            //     // Ajoutez ici la logique pour produire un message RabbitMQ en fonction des données du port
-            //     // Exemple : Utilisation de la bibliothèque php-amqplib
-
-            //     // Connexion à RabbitMQ
-            //     $connection = new \PhpAmqpLib\Connection\AMQPStreamConnection('localhost', 5672, 'guest', 'guest');
-            //     $channel = $connection->channel();
-
-            //     // Déclaration de la file d'attente
-            //     $channel->queue_declare('ports_queue', false, true, false, false);
-
-            //     // Message à envoyer (peut être modifié selon vos besoins)
-            //     $message = json_encode([
-            //         'message' => 'Les ports ont été affichés !',
-            //         'portData' => $portData,
-            //     ]);
-
-            //     // Création de l'objet AMQPMessage
-            //     $msg = new AMQPMessage($message);
-
-            //     // Publication du message dans la file d'attente
-            //     $channel->basic_publish($msg, '', 'ports_queue');
-
-            //     // Fermeture de la connexion
-            //     $channel->close();
-            //     $connection->close();
-            // }
             ?>
         </tbody>
     </table>

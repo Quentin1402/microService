@@ -43,15 +43,6 @@ services:
     command: [ "sh", "-c", "chmod +x /certs/key.pem && nginx -g 'daemon off;'" ]  # Commande pour démarrer Nginx
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost"]  # Vérification de la santé du conteneur Nginx
-
-  rabbitmq:
-    image: "rabbitmq:3-management"
-    ports:
-      - "5672:5672"  # Port AMQP
-      - "15672:15672" # Port pour l'interface de gestion
-    environment:
-      RABBITMQ_DEFAULT_USER: "guest"
-      RABBITMQ_DEFAULT_PASS: "guest"
   
   # Service Prometheus
   prometheus:
@@ -72,3 +63,24 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=admin  # Mot de passe admin pour Grafana
     volumes:
       - ./grafana:/var/lib/grafana
+
+  # Service Elasticsearch
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.0
+    environment:
+      - discovery.type=single-node
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
+  # Service Logstash
+  logstash:
+    build:
+      context: ./app  # Assurez-vous que le chemin relatif correspond à l'emplacement du Dockerfile
+      dockerfile: Dockerfile
+    volumes:
+      - ./logstash.conf:/etc/logstash/conf.d/logstash.conf
+      - ./logstash_logs:/var/log/logstash  # Ajout d'un volume pour les logs de Logstash
+    depends_on:
+      - elasticsearch
+    restart: always

@@ -1,0 +1,88 @@
+version: '3'
+
+services:
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mariadb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: root
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./MariaDB/liste.sql:/docker-entrypoint-initdb.d/liste.sql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u user -p root"]
+
+  web:
+    image: nginx:latest
+    deploy:
+      replicas: 5
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "9090:80"
+    depends_on:
+      - db
+    command: /bin/bash -c "a2ensite 000-default && apache2-foreground"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+
+  nginx:
+    image: nginx:latest
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./certs:/certs
+    depends_on:
+      - web
+    restart: always
+    command: [ "sh", "-c", "chmod +x /certs/key.pem && nginx -g 'daemon off;'" ]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+
+  prometheus:
+    image: prom/prometheus
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "9091:9090"
+    volumes:
+      - ./prometheus:/etc/prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - ./grafana:/var/lib/grafana
