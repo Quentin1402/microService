@@ -45,60 +45,52 @@ services:
       test: ["CMD", "curl", "-f", "http://localhost"]  # Vérification de la santé du conteneur Nginx
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
+    image: elasticsearch:7.6.2
     container_name: elasticsearch
+    hostname: elasticsearch
+    restart: always
     environment:
-      - discovery.type=single-node
-      - ES_JAVA_OPTS=-Xms1g -Xmx1g
-      - xpack.security.http.ssl.enabled=false
-      - xpack.security.transport.ssl.enabled=false
-      - xpack.security.enabled=false
+      - "discovery.type=single-node"
     ports:
-      - "9200:9200"
-      - "9300:9300"
+      - 9200:9200
+      - 9300:9300
     networks:
-      - elk
+      - dockerelk
+    volumes:
+      - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/elasticsearch.yml
 
   logstash:
-    image: docker.elastic.co/logstash/logstash:7.11.1
+    image: logstash:7.6.2
     container_name: logstash
-    volumes:
-      - ./logstash/logstash.conf:/usr/share/logstash/pipeline/
+    hostname: logstash
     ports:
-      - "5044:5044"
-      - "5045:5045"
-      - "9600:9600"
-    networks:
-      - elk
+      - 9600:9600
+      - 8089:8089
+    restart: always
+    links:
+      - elasticsearch:elasticsearch
     depends_on:
       - elasticsearch
+    networks:
+      - dockerelk
+    volumes:
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - ./logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - ./data/data-json.log:/usr/share/logstash/external-data/data-json.log
+
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.11.1
+    image: kibana:7.6.2
     container_name: kibana
     environment:
-    - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
-    - ELASTICSEARCH_USERNAME=elastic
-    - ELASTICSEARCH_PASSWORD=password
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
     ports:
       - "5601:5601"
     networks:
-      - elk
+      - dockerelk
     depends_on:
-      - elasticsearch
-
-  filebeat:
-    image: docker.elastic.co/beats/filebeat:7.11.2
-    container_name: filebeat
-    volumes:
-      - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
-      - ./logs:/logs
-    networks:
-      - elk
-    depends_on:
-      - logstash
       - elasticsearch
 
 networks:
-  elk:
+  dockerelk:
     driver: bridge

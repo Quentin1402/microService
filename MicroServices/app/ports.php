@@ -44,9 +44,6 @@
         <tbody>
             <?php
 
-            // Incluez l'autoload d'Elasticsearch-PHP
-            require 'vendor/elasticsearch-php/autoload.php';
-
             // Connexion à la base de données
             $servername = "db";
             $username = "user";

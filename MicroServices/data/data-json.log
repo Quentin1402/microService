@@ -1,0 +1,100 @@
+{ "rank" : 1, "name" : "Port of Shanghai", "country" : "China", "code" : "SHG" }
+{ "rank" : 2, "name" : "Port of Singapore", "country" : "Singapore", "code" : "SIN" }
+{ "rank" : 3, "name" : "Port of Shenzhen", "country" : "China", "code" : "SZX" }
+{ "rank" : 4, "name" : "Ningbo-Zhoushan Port", "country" : "China", "code" : "NGB" }
+{ "rank" : 5, "name" : "Port of Guangzhou", "country" : "China", "code" : "CAN" }
+{ "rank" : 6, "name" : "Port of Busan", "country" : "South Korea", "code" : "PUS" }
+{ "rank" : 7, "name" : "Port of Hong Kong", "country" : "Hong Kong", "code" : "HKG" }
+{ "rank" : 8, "name" : "Port of Qingdao", "country" : "China", "code" : "TAO" }
+{ "rank" : 9, "name" : "Port of Tianjin", "country" : "China", "code" : "XING" }
+{ "rank" : 10, "name" : "Port of Dubai", "country" : "United Arab Emirates", "code" : "DXB" }
+{ "rank" : 11, "name" : "Port of Rotterdam", "country" : "Netherlands", "code" : "RTM" }
+{ "rank" : 12, "name" : "Port of Ningbo", "country" : "China", "code" : "NGB" }
+{ "rank" : 13, "name" : "Port of Tangshan", "country" : "China", "code" : "TGH" }
+{ "rank" : 14, "name" : "Port of Dalian", "country" : "China", "code" : "DLC" }
+{ "rank" : 15, "name" : "Port of Antwerp", "country" : "Belgium", "code" : "ANR" }
+{ "rank" : 16, "name" : "Port of Xiamen", "country" : "China", "code" : "XMN" }
+{ "rank" : 17, "name" : "Port of Hamburg", "country" : "Germany", "code" : "HAM" }
+{ "rank" : 18, "name" : "Port of Los Angeles", "country" : "USA", "code" : "LAX" }
+{ "rank" : 19, "name" : "Port of Long Beach", "country" : "USA", "code" : "LGB" }
+{ "rank" : 20, "name" : "Port of Tanjung Pelepas", "country" : "Malaysia", "code" : "TPP" }
+{ "rank" : 21, "name" : "Port of Laem Chabang", "country" : "Thailand", "code" : "LCH" }
+{ "rank" : 22, "name" : "Port of Kaohsiung", "country" : "Taiwan", "code" : "KHH" }
+{ "rank" : 23, "name" : "Port of New York and New Jersey", "country" : "USA", "code" : "NYC" }
+{ "rank" : 24, "name" : "Port of Jingtang", "country" : "China", "code" : "XING" }
+{ "rank" : 25, "name" : "Port of Colombo", "country" : "Sri Lanka", "code" : "CMB" }
+{ "rank" : 26, "name" : "Port of Dandong", "country" : "China", "code" : "DDG" }
+{ "rank" : 27, "name" : "Port of Jawaharlal Nehru", "country" : "India", "code" : "JNP" }
+{ "rank" : 28, "name" : "Port of Houston", "country" : "USA", "code" : "HOU" }
+{ "rank" : 29, "name" : "Port of Khor Fakkan", "country" : "United Arab Emirates", "code" : "KLF" }
+{ "rank" : 30, "name" : "Port of Port Klang", "country" : "Malaysia", "code" : "PKA" }
+{ "rank" : 31, "name" : "Port of Qingdao", "country" : "China", "code" : "TAO" }
+{ "rank" : 32, "name" : "Port of Rizhao", "country" : "China", "code" : "RIZ" }
+{ "rank" : 33, "name" : "Port of Rotterdam", "country" : "Netherlands", "code" : "RTM" }
+{ "rank" : 34, "name" : "Port of Algeciras", "country" : "Spain", "code" : "ALG" }
+{ "rank" : 35, "name" : "Port of Amsterdam", "country" : "Netherlands", "code" : "AMS" }
+{ "rank" : 36, "name" : "Port of Santos", "country" : "Brazil", "code" : "SSZ" }
+{ "rank" : 37, "name" : "Port of Barcelona", "country" : "Spain", "code" : "BCL" }
+{ "rank" : 38, "name" : "Port of Vancouver", "country" : "Canada", "code" : "VCR" }
+{ "rank" : 39, "name" : "Port of Valencia", "country" : "Spain", "code" : "VLC" }
+{ "rank" : 40, "name" : "Port of Salalah", "country" : "Oman", "code" : "SLL" }
+{ "rank" : 41, "name" : "Port of Felixstowe", "country" : "United Kingdom", "code" : "FLX" }
+{ "rank" : 42, "name" : "Port of Hamburg", "country" : "Germany", "code" : "HAM" }
+{ "rank" : 43, "name" : "Port of Norfolk", "country" : "USA", "code" : "ORF" }
+{ "rank" : 44, "name" : "Port of Piraeus", "country" : "Greece", "code" : "PIR" }
+{ "rank" : 45, "name" : "Port of Jeddah", "country" : "Saudi Arabia", "code" : "JED" }
+{ "rank" : 46, "name" : "Port of Mumbai", "country" : "India", "code" : "BOM" }
+{ "rank" : 47, "name" : "Port of Bremerhaven", "country" : "Germany", "code" : "BRV" }
+{ "rank" : 48, "name" : "Port of Lianyungang", "country" : "China", "code" : "LYG" }
+{ "rank" : 49, "name" : "Port of Tacoma", "country" : "USA", "code" : "TAC" }
+{ "rank" : 50, "name" : "Port of Port Said", "country" : "Egypt", "code" : "PSD" }
+{ "rank" : 51, "name" : "Port of Southampton", "country" : "United Kingdom", "code" : "SHQ" }
+{ "rank" : 52, "name" : "Port of Seattle", "country" : "USA", "code" : "SEA" }
+{ "rank" : 53, "name" : "Port of Le Havre", "country" : "France", "code" : "LHV" }
+{ "rank" : 54, "name" : "Port of Genoa", "country" : "Italy", "code" : "GOA" }
+{ "rank" : 55, "name" : "Port of Jakarta", "country" : "Indonesia", "code" : "JKT" }
+{ "rank" : 56, "name" : "Port of Saint Petersburg", "country" : "Russia", "code" : "STP" }
+{ "rank" : 57, "name" : "Port of Santos", "country" : "Brazil", "code" : "SSZ" }
+{ "rank" : 58, "name" : "Port of Long Beach", "country" : "USA", "code" : "LGB" }
+{ "rank" : 59, "name" : "Port of Barcelona", "country" : "Spain", "code" : "BCL" }
+{ "rank" : 60, "name" : "Port of Bremen", "country" : "Germany", "code" : "BRE" }
+{ "rank" : 61, "name" : "Port of Melbourne", "country" : "Australia", "code" : "MEL" }
+{ "rank" : 62, "name" : "Port of Vancouver", "country" : "Canada", "code" : "VCR" }
+{ "rank" : 63, "name" : "Port of Antwerp", "country" : "Belgium", "code" : "ANR" }
+{ "rank" : 64, "name" : "Port of Gdansk", "country" : "Poland", "code" : "GDN" }
+{ "rank" : 65, "name" : "Port of Kobe", "country" : "Japan", "code" : "OBI" }
+{ "rank" : 66, "name" : "Port of Santos", "country" : "Brazil", "code" : "SSZ" }
+{ "rank" : 67, "name" : "Port of Dublin", "country" : "Ireland", "code" : "DUB" }
+{ "rank" : 68, "name" : "Port of Hamburg", "country" : "Germany", "code" : "HAM" }
+{ "rank" : 69, "name" : "Port of Durban", "country" : "South Africa", "code" : "DUR" }
+{ "rank" : 70, "name" : "Port of New Orleans", "country" : "USA", "code" : "MSY" }
+{ "rank" : 71, "name" : "Port of Ningbo-Zhoushan", "country" : "China", "code" : "NGB" }
+{ "rank" : 72, "name" : "Port of La Spezia", "country" : "Italy", "code" : "LSZ" }
+{ "rank" : 73, "name" : "Port of New York and New Jersey", "country" : "USA", "code" : "NYC" }
+{ "rank" : 74, "name" : "Port of Vung Tau", "country" : "Vietnam", "code" : "VTG" }
+{ "rank" : 75, "name" : "Port of Baltimore", "country" : "USA", "code" : "BWI" }
+{ "rank" : 76, "name" : "Port of Copenhagen", "country" : "Denmark", "code" : "CPH" }
+{ "rank" : 77, "name" : "Port of Laem Chabang", "country" : "Thailand", "code" : "LCH" }
+{ "rank" : 78, "name" : "Port of Genoa", "country" : "Italy", "code" : "GOA" }
+{ "rank" : 79, "name" : "Port of Ashdod", "country" : "Israel", "code" : "ASH" }
+{ "rank" : 80, "name" : "Port of Dunkirk", "country" : "France", "code" : "DUNK" }
+{ "rank" : 81, "name" : "Port of Tampa", "country" : "USA", "code" : "TPA" }
+{ "rank" : 82, "name" : "Port of Buenos Aires", "country" : "Argentina", "code" : "BUE" }
+{ "rank" : 83, "name" : "Port of Ravenna", "country" : "Italy", "code" : "RAV" }
+{ "rank" : 84, "name" : "Port of Nansha", "country" : "China", "code" : "CAN" }
+{ "rank" : 85, "name" : "Port of Valencia", "country" : "Spain", "code" : "VLC" }
+{ "rank" : 86, "name" : "Port of Haiphong", "country" : "Vietnam", "code" : "HPH" }
+{ "rank" : 87, "name" : "Port of Tacoma", "country" : "USA", "code" : "TAC" }
+{ "rank" : 88, "name" : "Port of Izmir", "country" : "Turkey", "code" : "IZM" }
+{ "rank" : 89, "name" : "Port of Odessa", "country" : "Ukraine", "code" : "ODE" }
+{ "rank" : 90, "name" : "Port of Mombasa", "country" : "Kenya", "code" : "MBA" }
+{ "rank" : 91, "name" : "Port of Cartagena", "country" : "Colombia", "code" : "CTG" }
+{ "rank" : 92, "name" : "Port of New Orleans", "country" : "USA", "code" : "MSY" }
+{ "rank" : 93, "name" : "Port of Port Klang", "country" : "Malaysia", "code" : "PKA" }
+{ "rank" : 94, "name" : "Port of Brisbane", "country" : "Australia", "code" : "BNE" }
+{ "rank" : 95, "name" : "Port of Charleston", "country" : "USA", "code" : "CHS" }
+{ "rank" : 96, "name" : "Port of Chittagong", "country" : "Bangladesh", "code" : "CGP" }
+{ "rank" : 97, "name" : "Port of Rijeka", "country" : "Croatia", "code" : "RJK" }
+{ "rank" : 98, "name" : "Port of Houston", "country" : "USA", "code" : "HOU" }
+{ "rank" : 99, "name" : "Port of Dar es Salaam", "country" : "Tanzania", "code" : "DAR" }
+{ "rank" : 100, "name" : "Port of Santos", "country" : "Brazil", "code" : "SSZ" }
