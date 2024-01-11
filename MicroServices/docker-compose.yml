@@ -43,26 +43,6 @@ services:
     command: [ "sh", "-c", "chmod +x /certs/key.pem && nginx -g 'daemon off;'" ]  # Commande pour démarrer Nginx
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost"]  # Vérification de la santé du conteneur Nginx
-  
-  # Service Prometheus
-  prometheus:
-    image: prom/prometheus
-    ports:
-      - "9091:9090"  # Port pour l'interface de Prometheus
-    volumes:
-      - ./prometheus:/etc/prometheus
-    command:
-      - --config.file=/etc/prometheus/prometheus.yml
-
-  # Service Grafana
-  grafana:
-    image: grafana/grafana
-    ports:
-      - "3000:3000"  # Port pour l'interface de Grafana
-    environment:
-      - GF_SECURITY_ADMIN_PASSWORD=admin  # Mot de passe admin pour Grafana
-    volumes:
-      - ./grafana:/var/lib/grafana
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
