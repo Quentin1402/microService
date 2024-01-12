@@ -44,7 +44,7 @@
         <tbody>
             <?php
 
-            // Connexion à la base de données
+            // Connexion à la base de données MariaDB
             $servername = "db";
             $username = "user";
             $password = "root";
@@ -65,9 +65,6 @@
                 // Affichage des données de chaque ligne
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr><td>" . $row["rank"] . "</td><td>" . $row["name"] . "</td><td>" . $row["country"] . "</td><td>" . $row["code"] . "</td></tr>";
-
-                    // Journalisation des données de chaque port
-                    $logMessage = "Port: " . $row["name"] . ", Country: " . $row["country"] . ", Code: " . $row["code"];
                 }
 
                 // Affichage du message après l'affichage des ports
@@ -75,7 +72,12 @@
             } else {
                 echo "<tr><td colspan='4'>Aucun ports</td></tr>";
             }
+
+            // Fermeture de la connexion à la base de données
+            $conn->close();
+
             ?>
+
         </tbody>
     </table>
 </body>
